@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A74122B81BFC23E300E88FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122B71BFC23E300E88FD8 /* AppDelegate.swift */; };
+		A74122BC1BFC23E300E88FD8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122BB1BFC23E300E88FD8 /* GameScene.swift */; };
+		A74122BE1BFC23E300E88FD8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122BD1BFC23E300E88FD8 /* GameViewController.swift */; };
+		A74122C11BFC23E300E88FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74122BF1BFC23E300E88FD8 /* Main.storyboard */; };
+		A74122C31BFC23E300E88FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74122C21BFC23E300E88FD8 /* Assets.xcassets */; };
+		A74122C61BFC23E300E88FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74122C41BFC23E300E88FD8 /* LaunchScreen.storyboard */; };
+		A74122D11BFC23E300E88FD8 /* FallingOrFlyingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122D01BFC23E300E88FD8 /* FallingOrFlyingTests.swift */; };
+		A74122DC1BFC23E300E88FD8 /* FallingOrFlyingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122DB1BFC23E300E88FD8 /* FallingOrFlyingUITests.swift */; };
+		A74122EC1BFC32D900E88FD8 /* MyWalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122EB1BFC32D900E88FD8 /* MyWalls.swift */; };
+		A74122F01BFC415700E88FD8 /* MyHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122EF1BFC415700E88FD8 /* MyHero.swift */; };
+		A74316921BFD413B00B6089E /* MyObstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74316911BFD413B00B6089E /* MyObstacles.swift */; };
+		A74316951BFD416300B6089E /* MyObstaclesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74316941BFD416300B6089E /* MyObstaclesGenerator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A74122CD1BFC23E300E88FD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74122AC1BFC23E300E88FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74122B31BFC23E300E88FD8;
+			remoteInfo = FallingOrFlying;
+		};
+		A74122D81BFC23E300E88FD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74122AC1BFC23E300E88FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74122B31BFC23E300E88FD8;
+			remoteInfo = FallingOrFlying;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A74122B41BFC23E300E88FD8 /* FallingThroughTheWalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingThroughTheWalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74122B71BFC23E300E88FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A74122BB1BFC23E300E88FD8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A74122BD1BFC23E300E88FD8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A74122C01BFC23E300E88FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A74122C21BFC23E300E88FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A74122C51BFC23E300E88FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A74122C71BFC23E300E88FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74122CC1BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FallingThroughTheWalls.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74122D01BFC23E300E88FD8 /* FallingOrFlyingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingOrFlyingTests.swift; sourceTree = "<group>"; };
+		A74122D21BFC23E300E88FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74122D71BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FallingThroughTheWalls.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74122DB1BFC23E300E88FD8 /* FallingOrFlyingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingOrFlyingUITests.swift; sourceTree = "<group>"; };
+		A74122DD1BFC23E300E88FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74122EB1BFC32D900E88FD8 /* MyWalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWalls.swift; sourceTree = "<group>"; };
+		A74122EF1BFC415700E88FD8 /* MyHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHero.swift; sourceTree = "<group>"; };
+		A74316911BFD413B00B6089E /* MyObstacles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyObstacles.swift; sourceTree = "<group>"; };
+		A74316941BFD416300B6089E /* MyObstaclesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyObstaclesGenerator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A74122B11BFC23E300E88FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122C91BFC23E300E88FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122D41BFC23E300E88FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A74122AB1BFC23E300E88FD8 = {
+			isa = PBXGroup;
+			children = (
+				A74122B61BFC23E300E88FD8 /* FallingThroughTheWalls */,
+				A74122CF1BFC23E300E88FD8 /* FallingOrFlyingTests */,
+				A74122DA1BFC23E300E88FD8 /* FallingOrFlyingUITests */,
+				A74122B51BFC23E300E88FD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A74122B51BFC23E300E88FD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A74122B41BFC23E300E88FD8 /* FallingThroughTheWalls.app */,
+				A74122CC1BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */,
+				A74122D71BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A74122B61BFC23E300E88FD8 /* FallingThroughTheWalls */ = {
+			isa = PBXGroup;
+			children = (
+				A74122B71BFC23E300E88FD8 /* AppDelegate.swift */,
+				A74122BB1BFC23E300E88FD8 /* GameScene.swift */,
+				A74316931BFD414500B6089E /* Obstacles */,
+				A74122BD1BFC23E300E88FD8 /* GameViewController.swift */,
+				A74122EB1BFC32D900E88FD8 /* MyWalls.swift */,
+				A74122EF1BFC415700E88FD8 /* MyHero.swift */,
+				A74122BF1BFC23E300E88FD8 /* Main.storyboard */,
+				A74122C21BFC23E300E88FD8 /* Assets.xcassets */,
+				A74122C41BFC23E300E88FD8 /* LaunchScreen.storyboard */,
+				A74122C71BFC23E300E88FD8 /* Info.plist */,
+			);
+			name = FallingThroughTheWalls;
+			path = FallingOrFlying;
+			sourceTree = "<group>";
+		};
+		A74122CF1BFC23E300E88FD8 /* FallingOrFlyingTests */ = {
+			isa = PBXGroup;
+			children = (
+				A74122D01BFC23E300E88FD8 /* FallingOrFlyingTests.swift */,
+				A74122D21BFC23E300E88FD8 /* Info.plist */,
+			);
+			path = FallingOrFlyingTests;
+			sourceTree = "<group>";
+		};
+		A74122DA1BFC23E300E88FD8 /* FallingOrFlyingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A74122DB1BFC23E300E88FD8 /* FallingOrFlyingUITests.swift */,
+				A74122DD1BFC23E300E88FD8 /* Info.plist */,
+			);
+			path = FallingOrFlyingUITests;
+			sourceTree = "<group>";
+		};
+		A74316931BFD414500B6089E /* Obstacles */ = {
+			isa = PBXGroup;
+			children = (
+				A74316911BFD413B00B6089E /* MyObstacles.swift */,
+				A74316941BFD416300B6089E /* MyObstaclesGenerator.swift */,
+			);
+			name = Obstacles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A74122B31BFC23E300E88FD8 /* FallingThroughTheWalls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74122E01BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWalls" */;
+			buildPhases = (
+				A74122B01BFC23E300E88FD8 /* Sources */,
+				A74122B11BFC23E300E88FD8 /* Frameworks */,
+				A74122B21BFC23E300E88FD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FallingThroughTheWalls;
+			productName = FallingOrFlying;
+			productReference = A74122B41BFC23E300E88FD8 /* FallingThroughTheWalls.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A74122CB1BFC23E300E88FD8 /* FallingThroughTheWallsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74122E31BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWallsTests" */;
+			buildPhases = (
+				A74122C81BFC23E300E88FD8 /* Sources */,
+				A74122C91BFC23E300E88FD8 /* Frameworks */,
+				A74122CA1BFC23E300E88FD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A74122CE1BFC23E300E88FD8 /* PBXTargetDependency */,
+			);
+			name = FallingThroughTheWallsTests;
+			productName = FallingOrFlyingTests;
+			productReference = A74122CC1BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A74122D61BFC23E300E88FD8 /* FallingThroughTheWallsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74122E61BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWallsUITests" */;
+			buildPhases = (
+				A74122D31BFC23E300E88FD8 /* Sources */,
+				A74122D41BFC23E300E88FD8 /* Frameworks */,
+				A74122D51BFC23E300E88FD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A74122D91BFC23E300E88FD8 /* PBXTargetDependency */,
+			);
+			name = FallingThroughTheWallsUITests;
+			productName = FallingOrFlyingUITests;
+			productReference = A74122D71BFC23E300E88FD8 /* FallingThroughTheWalls.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A74122AC1BFC23E300E88FD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Sean Kim";
+				TargetAttributes = {
+					A74122B31BFC23E300E88FD8 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					A74122CB1BFC23E300E88FD8 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A74122B31BFC23E300E88FD8;
+					};
+					A74122D61BFC23E300E88FD8 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A74122B31BFC23E300E88FD8;
+					};
+				};
+			};
+			buildConfigurationList = A74122AF1BFC23E300E88FD8 /* Build configuration list for PBXProject "FallingThroughTheWalls" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A74122AB1BFC23E300E88FD8;
+			productRefGroup = A74122B51BFC23E300E88FD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A74122B31BFC23E300E88FD8 /* FallingThroughTheWalls */,
+				A74122CB1BFC23E300E88FD8 /* FallingThroughTheWallsTests */,
+				A74122D61BFC23E300E88FD8 /* FallingThroughTheWallsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A74122B21BFC23E300E88FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74122C61BFC23E300E88FD8 /* LaunchScreen.storyboard in Resources */,
+				A74122C31BFC23E300E88FD8 /* Assets.xcassets in Resources */,
+				A74122C11BFC23E300E88FD8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122CA1BFC23E300E88FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122D51BFC23E300E88FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A74122B01BFC23E300E88FD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74316951BFD416300B6089E /* MyObstaclesGenerator.swift in Sources */,
+				A74122BC1BFC23E300E88FD8 /* GameScene.swift in Sources */,
+				A74122BE1BFC23E300E88FD8 /* GameViewController.swift in Sources */,
+				A74316921BFD413B00B6089E /* MyObstacles.swift in Sources */,
+				A74122B81BFC23E300E88FD8 /* AppDelegate.swift in Sources */,
+				A74122EC1BFC32D900E88FD8 /* MyWalls.swift in Sources */,
+				A74122F01BFC415700E88FD8 /* MyHero.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122C81BFC23E300E88FD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74122D11BFC23E300E88FD8 /* FallingOrFlyingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74122D31BFC23E300E88FD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74122DC1BFC23E300E88FD8 /* FallingOrFlyingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A74122CE1BFC23E300E88FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74122B31BFC23E300E88FD8 /* FallingThroughTheWalls */;
+			targetProxy = A74122CD1BFC23E300E88FD8 /* PBXContainerItemProxy */;
+		};
+		A74122D91BFC23E300E88FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74122B31BFC23E300E88FD8 /* FallingThroughTheWalls */;
+			targetProxy = A74122D81BFC23E300E88FD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A74122BF1BFC23E300E88FD8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74122C01BFC23E300E88FD8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A74122C41BFC23E300E88FD8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74122C51BFC23E300E88FD8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A74122DE1BFC23E300E88FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A74122DF1BFC23E300E88FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A74122E11BFC23E300E88FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FallingOrFlying/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlying;
+				PRODUCT_NAME = FallingThroughTheWalls;
+			};
+			name = Debug;
+		};
+		A74122E21BFC23E300E88FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FallingOrFlying/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlying;
+				PRODUCT_NAME = FallingThroughTheWalls;
+			};
+			name = Release;
+		};
+		A74122E41BFC23E300E88FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = FallingOrFlyingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlyingTests;
+				PRODUCT_NAME = FallingThroughTheWalls;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FallingThroughTheWalls.app/FallingThroughTheWalls";
+			};
+			name = Debug;
+		};
+		A74122E51BFC23E300E88FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FallingOrFlyingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlyingTests;
+				PRODUCT_NAME = FallingThroughTheWalls;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FallingThroughTheWalls.app/FallingThroughTheWalls";
+			};
+			name = Release;
+		};
+		A74122E71BFC23E300E88FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = FallingOrFlyingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlyingUITests;
+				PRODUCT_NAME = FallingThroughTheWalls;
+				TEST_TARGET_NAME = FallingOrFlying;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A74122E81BFC23E300E88FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FallingOrFlyingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanKim.FallingOrFlyingUITests;
+				PRODUCT_NAME = FallingThroughTheWalls;
+				TEST_TARGET_NAME = FallingOrFlying;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A74122AF1BFC23E300E88FD8 /* Build configuration list for PBXProject "FallingThroughTheWalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74122DE1BFC23E300E88FD8 /* Debug */,
+				A74122DF1BFC23E300E88FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74122E01BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74122E11BFC23E300E88FD8 /* Debug */,
+				A74122E21BFC23E300E88FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74122E31BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWallsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74122E41BFC23E300E88FD8 /* Debug */,
+				A74122E51BFC23E300E88FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74122E61BFC23E300E88FD8 /* Build configuration list for PBXNativeTarget "FallingThroughTheWallsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74122E71BFC23E300E88FD8 /* Debug */,
+				A74122E81BFC23E300E88FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A74122AC1BFC23E300E88FD8 /* Project object */;
+}
