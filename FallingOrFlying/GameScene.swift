@@ -15,8 +15,11 @@ class GameScene: SKScene {
     var obstacleGenerator: MyObstaclesGenerator! 
     var didItStart: Bool = false
     var firstTouch: Bool = false
+    var wholeView: SKView!
+    var location: CGPoint!
     
     override func didMoveToView(view: SKView) {
+        wholeView = view
         backgroundColor = UIColor(red: 184/255, green: 223/255, blue: 242/255, alpha: 1.0)
         hero = MyHero()
         hero.position = CGPointMake(self.frame.width/2, self.frame.height/2 + self.frame.height/3.5)
@@ -48,6 +51,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
+        
         if !didItStart {
             verticalWallLeft.start()
             verticalWallRight.start()
@@ -60,12 +64,37 @@ class GameScene: SKScene {
         }
         else if firstTouch == true
         {
+            var touch = touches.first as UITouch!
+            location = touch.locationInView(self.view)
+            hero.removeAllActions()
+            if(location.x >= wholeView.frame.width/2)
+            {
+                hero.move(1)
+            }
+            else
+            {
+                hero.move(-1)
+            }
             
         }
         
         
         
     }
+    /*override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        var touch = touches.first as UITouch!
+        location = touch.locationInView(self.view)
+        hero.removeAllActions()
+        if(location.x >= wholeView.frame.width/2)
+        {
+            hero.move(1)
+        }
+        else
+        {
+            hero.move(-1)
+        }
+        
+    }*/
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */

@@ -94,4 +94,9 @@ class MyHero: SKSpriteNode {
         
         
     }
+    func move(x: Int)
+    {
+        let moveSide = SKAction.moveByX(CGFloat(x*6), y: 0, duration: 0.05)
+        self.runAction(SKAction.repeatActionForever(moveSide))
+    }
 }
