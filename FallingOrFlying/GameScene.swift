@@ -34,6 +34,7 @@ class GameScene: SKScene {
         obstacleGenerator = MyObstaclesGenerator(color: UIColor.clearColor(), size: view.frame.size)
         obstacleGenerator.position = view.center
         addChild(obstacleGenerator)
+        // test
         
         
     }
