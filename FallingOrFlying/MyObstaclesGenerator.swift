@@ -11,13 +11,13 @@ import SpriteKit
 
 class MyObstaclesGenerator: SKSpriteNode
 {
-    var timer: NSTimer?
+    var obstaclesTimer: NSTimer?
     var arraySize = Int(0)
     var obstacleArray = [MyObstacles]()
     
     func startGenerateObstacleEvery(seconds:NSTimeInterval) // add a parameter for size here, and 
     {
-        timer = NSTimer.scheduledTimerWithTimeInterval(seconds, target: self, selector: "GenerateObstacle", userInfo: nil, repeats: true)
+        obstaclesTimer = NSTimer.scheduledTimerWithTimeInterval(seconds, target: self, selector: "GenerateObstacle", userInfo: nil, repeats: true)
         
     }
     
@@ -185,6 +185,7 @@ class MyObstaclesGenerator: SKSpriteNode
                 }
             }
         }
+        //deleteObstacles(100)
         
     }
     // go around the loop by making GenerateObstacle func to have constant starting and ending leftWidth.
@@ -198,7 +199,7 @@ class MyObstaclesGenerator: SKSpriteNode
     }
     func stop()
     {
-        timer?.invalidate()
+        obstaclesTimer?.invalidate()
         for var i = 0; i < 100; i++
         {
             obstacleArray[i].removeAllActions()

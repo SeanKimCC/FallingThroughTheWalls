@@ -11,9 +11,10 @@ import SpriteKit
 
 class MyObstacles: SKSpriteNode
 {
-    var obstacleHeight:CGFloat!
+    //var obstacleHeight:CGFloat!
     var obstacleColour:UIColor!
-    var obstacleWidth:CGFloat!
+    //var obstacleWidth:CGFloat!
+    
     
     
     init(obstacleColour:UIColor, obstacleWidth: CGFloat, obstacleHeight:CGFloat) {
@@ -38,9 +39,9 @@ class MyObstacles: SKSpriteNode
     {
         removeAllActions()
     }
-    func physical(obstacleSize: CGSize)
+    func physical(paraSize: CGSize)
     {
-        physicsBody = SKPhysicsBody(rectangleOfSize: obstacleSize)
+        physicsBody = SKPhysicsBody(rectangleOfSize: paraSize)
         physicsBody?.categoryBitMask = obstacleC
         physicsBody?.affectedByGravity = false
 
