@@ -18,6 +18,8 @@ class MyHero: SKSpriteNode {
     init()
     {
         super.init(texture: nil, color: UIColor.clearColor(), size: CGSizeMake(36,54))
+        let heroSize = CGSize(width: 36,height: 54)
+        physical(heroSize)
         let bodyTopColor = UIColor(red: 250/255, green: 50/255, blue: 50/255, alpha: 1.0) // allow custom color
         let bodyTop = SKSpriteNode(texture: nil, color: bodyTopColor, size: CGSizeMake(36, 24))
         bodyTop.position = CGPointMake(0, 3)
@@ -72,6 +74,17 @@ class MyHero: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    func physical(heroSize: CGSize)
+    {
+        physicsBody = SKPhysicsBody(rectangleOfSize: heroSize)
+        physicsBody?.categoryBitMask = heroC
+        physicsBody?.contactTestBitMask = obstacleC
+        physicsBody?.affectedByGravity = false
+    }
+    /*func fall()
+    {
+        physicsBody?.affectedByGravity = true
+    }*/
     func startShaking()
     {
         //let moveLeft = SKAction.moveByX(-5, y: 0, duration: 1.0)
@@ -93,5 +106,10 @@ class MyHero: SKSpriteNode {
         
         
         
+    }
+    func move(x: Int)
+    {
+        let moveSide = SKAction.moveByX(CGFloat(x*6), y: 0, duration: 0.04)
+        self.runAction(SKAction.repeatActionForever(moveSide))
     }
 }

@@ -20,6 +20,8 @@ class MyWalls: SKSpriteNode
     init(size: CGSize, point: CGPoint)
     {
         super.init(texture: nil, color: UIColor.clearColor(), size: CGSizeMake(size.width, size.height))
+        physical(size)
+        
         anchorPoint = CGPointMake(0.5,0)
         var segmentColor: UIColor!
         for var i = -10; i < kNUM_SEGMENTS-10; i++ {
@@ -56,5 +58,12 @@ class MyWalls: SKSpriteNode
     {
         goingUp = !goingUp;
         
+    }
+    func physical(wallSize: CGSize)
+    {
+        physicsBody = SKPhysicsBody(rectangleOfSize: wallSize)
+        physicsBody?.categoryBitMask = obstacleC
+        physicsBody?.affectedByGravity = false
+
     }
 }

@@ -8,15 +8,19 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var hero: MyHero!
     var verticalWallLeft: MyWalls!
     var verticalWallRight: MyWalls!
     var obstacleGenerator: MyObstaclesGenerator! 
     var didItStart: Bool = false
     var firstTouch: Bool = false
+    var wholeView: SKView!
+    var location: CGPoint!
+    var isDead: Bool = false
     
     override func didMoveToView(view: SKView) {
+        wholeView = view
         backgroundColor = UIColor(red: 184/255, green: 223/255, blue: 242/255, alpha: 1.0)
         hero = MyHero()
         hero.position = CGPointMake(self.frame.width/2, self.frame.height/2 + self.frame.height/3.5)
@@ -35,6 +39,8 @@ class GameScene: SKScene {
         obstacleGenerator.position = view.center
         addChild(obstacleGenerator)
         
+        physicsWorld.contactDelegate = self
+        
         
     }
     func startEverything()
@@ -48,6 +54,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
+        
         if !didItStart {
             verticalWallLeft.start()
             verticalWallRight.start()
@@ -58,14 +65,50 @@ class GameScene: SKScene {
             didItStart = !didItStart
             firstTouch = true
         }
-        else if firstTouch == true
+        else if firstTouch == true && isDead == false
         {
+            let touch = touches.first as UITouch!
+            location = touch.locationInView(self.view)
+            hero.removeAllActions()
+            if(location.x >= wholeView.frame.width/2)
+            {
+                hero.move(1)
+            }
+            else
+            {
+                hero.move(-1)
+            }
             
         }
         
         
         
     }
+
+    func didBeginContact(contact: SKPhysicsContact) {
+        hero.removeAllActions()
+        verticalWallLeft.removeAllActions()
+        verticalWallRight.removeAllActions()
+        obstacleGenerator.stop()
+        isDead = true
+        //hero.fall()
+        
+    }
+    /*override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        var touch = touches.first as UITouch!
+        location = touch.locationInView(self.view)
+        hero.removeAllActions()
+        if(location.x >= wholeView.frame.width/2)
+        {
+            hero.move(1)
+        }
+        else
+        {
+            hero.move(-1)
+        }
+        
+    }*/
+    
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */

@@ -19,6 +19,7 @@
 		A74122F01BFC415700E88FD8 /* MyHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74122EF1BFC415700E88FD8 /* MyHero.swift */; };
 		A74316921BFD413B00B6089E /* MyObstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74316911BFD413B00B6089E /* MyObstacles.swift */; };
 		A74316951BFD416300B6089E /* MyObstaclesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74316941BFD416300B6089E /* MyObstaclesGenerator.swift */; };
+		A7C21F261C505BDB004E7FE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C21F251C505BDB004E7FE8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A74122EF1BFC415700E88FD8 /* MyHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHero.swift; sourceTree = "<group>"; };
 		A74316911BFD413B00B6089E /* MyObstacles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyObstacles.swift; sourceTree = "<group>"; };
 		A74316941BFD416300B6089E /* MyObstaclesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyObstaclesGenerator.swift; sourceTree = "<group>"; };
+		A7C21F251C505BDB004E7FE8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				A74122BD1BFC23E300E88FD8 /* GameViewController.swift */,
 				A74122EB1BFC32D900E88FD8 /* MyWalls.swift */,
 				A74122EF1BFC415700E88FD8 /* MyHero.swift */,
+				A7C21F251C505BDB004E7FE8 /* Constants.swift */,
 				A74122BF1BFC23E300E88FD8 /* Main.storyboard */,
 				A74122C21BFC23E300E88FD8 /* Assets.xcassets */,
 				A74122C41BFC23E300E88FD8 /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 				A74122B81BFC23E300E88FD8 /* AppDelegate.swift in Sources */,
 				A74122EC1BFC32D900E88FD8 /* MyWalls.swift in Sources */,
 				A74122F01BFC415700E88FD8 /* MyHero.swift in Sources */,
+				A7C21F261C505BDB004E7FE8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
