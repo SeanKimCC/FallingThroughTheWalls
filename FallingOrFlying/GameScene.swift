@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var hero: MyHero!
     var verticalWallLeft: MyWalls!
     var verticalWallRight: MyWalls!
@@ -17,6 +17,7 @@ class GameScene: SKScene {
     var firstTouch: Bool = false
     var wholeView: SKView!
     var location: CGPoint!
+    var isDead: Bool = false
     
     override func didMoveToView(view: SKView) {
         wholeView = view
@@ -37,6 +38,8 @@ class GameScene: SKScene {
         obstacleGenerator = MyObstaclesGenerator(color: UIColor.clearColor(), size: view.frame.size)
         obstacleGenerator.position = view.center
         addChild(obstacleGenerator)
+        
+        physicsWorld.contactDelegate = self
         
         
     }
@@ -62,9 +65,9 @@ class GameScene: SKScene {
             didItStart = !didItStart
             firstTouch = true
         }
-        else if firstTouch == true
+        else if firstTouch == true && isDead == false
         {
-            var touch = touches.first as UITouch!
+            let touch = touches.first as UITouch!
             location = touch.locationInView(self.view)
             hero.removeAllActions()
             if(location.x >= wholeView.frame.width/2)
@@ -81,6 +84,16 @@ class GameScene: SKScene {
         
         
     }
+
+    func didBeginContact(contact: SKPhysicsContact) {
+        hero.removeAllActions()
+        verticalWallLeft.removeAllActions()
+        verticalWallRight.removeAllActions()
+        obstacleGenerator.stop()
+        isDead = true
+        //hero.fall()
+        
+    }
     /*override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         var touch = touches.first as UITouch!
         location = touch.locationInView(self.view)
@@ -95,6 +108,7 @@ class GameScene: SKScene {
         }
         
     }*/
+    
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */

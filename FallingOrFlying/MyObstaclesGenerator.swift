@@ -12,6 +12,9 @@ import SpriteKit
 class MyObstaclesGenerator: SKSpriteNode
 {
     var timer: NSTimer?
+    var arraySize = Int(0)
+    var obstacleArray = [MyObstacles]()
+    
     func startGenerateObstacleEvery(seconds:NSTimeInterval) // add a parameter for size here, and 
     {
         timer = NSTimer.scheduledTimerWithTimeInterval(seconds, target: self, selector: "GenerateObstacle", userInfo: nil, repeats: true)
@@ -38,9 +41,10 @@ class MyObstaclesGenerator: SKSpriteNode
         //addChild(rightObstacle)
         var keepTrack = Int(0)
         
+        obstacleArray = [MyObstacles]()
         for var j = 0; j < 10; j++
         {
-            
+    
             randNum = arc4random_uniform(2)
             if j == 9
             {
@@ -80,8 +84,12 @@ class MyObstaclesGenerator: SKSpriteNode
                     
                     rightObstacle.position.x = size.width/2 - rightWidth/2 - size.width/18
                     rightObstacle.position.y = -size.height/2 - (counter)*(size.height/10)//- size.width/18
+                    
+                    obstacleArray.append(leftObstacle)
+                    obstacleArray.append(rightObstacle)
                     addChild(leftObstacle)
                     addChild(rightObstacle)
+                    arraySize += 2
 
                     
                 }
@@ -124,8 +132,12 @@ class MyObstaclesGenerator: SKSpriteNode
                         
                         rightObstacle.position.x = size.width/2 - rightWidth/2 - size.width/18
                         rightObstacle.position.y = -size.height/2 - (counter)*(size.height/10)//- size.width/18
+                        obstacleArray.append(leftObstacle)
+                        obstacleArray.append(rightObstacle)
                         addChild(leftObstacle)
                         addChild(rightObstacle)
+                        arraySize += 2
+
                         //counter = counter + 1
                     }
                 }
@@ -163,14 +175,35 @@ class MyObstaclesGenerator: SKSpriteNode
                         
                         rightObstacle.position.x = size.width/2 - rightWidth/2 - size.width/18
                         rightObstacle.position.y = -size.height/2 -  (counter)*(size.height/10) // - size.width/18 - size.height
+                        obstacleArray.append(leftObstacle)
+                        obstacleArray.append(rightObstacle)
                         addChild(leftObstacle)
                         addChild(rightObstacle)
+                        arraySize += 2
+
                     }
                 }
             }
         }
         
-    }// go around the loop by making GenerateObstacle func to have constant starting and ending leftWidth.
+    }
+    // go around the loop by making GenerateObstacle func to have constant starting and ending leftWidth.
     //create a whole screen of walls at a time. If rand = 0, the width of right wall decreases for all ten. else, the width of left wall decreases for all ten (there is constant space between walls)
+    func deleteObstacles(num: Int)
+    {
+        for var count = 0; count < num; count++
+        {
+            obstacleArray[count].removeFromParent()
+        }
+    }
+    func stop()
+    {
+        timer?.invalidate()
+        for var i = 0; i < 100; i++
+        {
+            obstacleArray[i].removeAllActions()
+        }
+
+    }
     
 }
