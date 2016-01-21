@@ -43,6 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         obstacleGenerator = MyObstaclesGenerator(color: UIColor.clearColor(), size: view.frame.size)
         obstacleGenerator.position = view.center
         addChild(obstacleGenerator)
+        // test
         
         physicsWorld.contactDelegate = self
         
