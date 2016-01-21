@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var hero: MyHero!
@@ -18,8 +19,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var wholeView: SKView!
     var location: CGPoint!
     var isDead: Bool = false
+    var gameViewCont: GameViewController!
+    
+    
     
     override func didMoveToView(view: SKView) {
+        
         wholeView = view
         backgroundColor = UIColor(red: 184/255, green: 223/255, blue: 242/255, alpha: 1.0)
         hero = MyHero()
@@ -64,6 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             obstacleGenerator.startGenerateObstacleEvery(1.4*5.0)
             didItStart = !didItStart
             firstTouch = true
+            self.gameViewCont.startScoring()
         }
         else if firstTouch == true && isDead == false
         {
@@ -91,7 +97,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         verticalWallRight.removeAllActions()
         obstacleGenerator.stop()
         isDead = true
-        //hero.fall()
+        self.gameViewCont.scoreTimer?.invalidate()
+        //obstacleGenerator.deleteObstacles(<#T##num: Int##Int#>)
         
     }
     /*override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -113,4 +120,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+    
+
 }

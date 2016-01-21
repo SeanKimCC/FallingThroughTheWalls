@@ -16,11 +16,13 @@ class MyWalls: SKSpriteNode
     let kColorOne = UIColor.blackColor()
     let kColorTwo = UIColor.whiteColor()
     var goingUp: Bool = false;
+    var timerWalls: NSTimer?
     
     init(size: CGSize, point: CGPoint)
     {
         super.init(texture: nil, color: UIColor.clearColor(), size: CGSizeMake(size.width, size.height))
         physical(size)
+        
         
         anchorPoint = CGPointMake(0.5,0)
         var segmentColor: UIColor!
@@ -59,6 +61,7 @@ class MyWalls: SKSpriteNode
         goingUp = !goingUp;
         
     }
+    
     func physical(wallSize: CGSize)
     {
         physicsBody = SKPhysicsBody(rectangleOfSize: wallSize)

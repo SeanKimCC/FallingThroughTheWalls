@@ -11,12 +11,11 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     var scene: GameScene!
-    @IBOutlet var viewLeft: UIView!
-    @IBOutlet var viewRight: UIView!
     
-    let longPressRec = UILongPressGestureRecognizer()
-    let tapRec = UITapGestureRecognizer()
     
+    @IBOutlet weak var lblScore: UILabel!
+    var score:Int = -8
+    var scoreTimer: NSTimer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,9 @@ class GameViewController: UIViewController {
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
+        scene.gameViewCont = self
+        lblScore.hidden = true
+        lblScore.font = lblScore.font.fontWithSize(40)
         
         /*longPressRec.addTarget(self, action: "viewLeft")
         tapRec.addTarget(self, action: "viewLeft")
@@ -46,6 +48,19 @@ class GameViewController: UIViewController {
         
         
         
+    }
+    func scores()
+    {
+        score += 1
+        if score == 0
+        {
+            lblScore.hidden = false
+        }
+        lblScore.text = String(score)
+    }
+    func startScoring()
+    {
+        scoreTimer = NSTimer.scheduledTimerWithTimeInterval(0.14, target: self, selector: "scores", userInfo: nil, repeats: true)
     }
 
     override func shouldAutorotate() -> Bool {

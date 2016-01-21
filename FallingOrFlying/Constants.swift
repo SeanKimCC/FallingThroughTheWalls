@@ -13,3 +13,5 @@ let heroC: UInt32 = 0x1 << 0
 let obstacleC: UInt32 = 0x1 << 1
 
 //var timer: NSTimer?
+
+var score: Int?
