@@ -7,9 +7,7 @@ DESCRIPTION: It is a game for iOS. The user must control the hero
             makes the hero move right. 
             
 INSTRUCTIONS: To test the game, 
-            - Click the Download ZIP button in the upper right corner. 
-            - Open the FallingOrFlying.xcodeproj file using Xcode.
-            - Compile and run.
+            Click the Download ZIP button in the upper right corner. Open the FallingOrFlying.xcodeproj file using Xcode.                Compile and run.
 
 AUTHOR: Sean Kim
 
